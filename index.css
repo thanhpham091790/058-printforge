@@ -1,0 +1,221 @@
+:root {
+  --color-1: #1E1E1E;
+  --color-2: #242931;
+  --color-3: #606060;
+  --color-4: #FFFFFF;
+  --color-5: #000000;
+  --color-6: #252A32;
+  --color-7: #262B32;
+  --color-8: #272C34;
+  --color-9: #54575E;
+  --color-10: #7B7E83;
+  --color-11: #B4B5B8;
+  --color-12: #D0D1D3;
+  --color-13: #F77429;
+  --color-14: #D1D1D1;
+  --color-15: #A1A1A1;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Albert Sans";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: auto;
+  letter-spacing: 0%;
+  color: var(--color-1);
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 6px 20px;
+}
+
+.nav {
+  flex-basis: 50%;
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+}
+.nav a {
+  flex-shrink: 0;
+  text-decoration: none;
+  color: var(--color-3);
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 5%;
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+}
+.nav a:hover,
+.nav .active {
+  color: var(--color-13);
+  border-bottom: 1px solid var(--color-13);
+}
+
+.sub-nav {
+  padding: 0 20px;
+  background-color: var(--color-4);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  overflow-x: scroll;
+  height: 60px;
+}
+.sub-nav a {
+  flex-grow: 1;
+  flex-shrink: 0;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 5%;
+  color: var(--color-3);
+  text-transform: uppercase;
+}
+.sub-nav a:hover,
+.sub-nav .active {
+  color: var(--color-13);
+}
+
+.product {
+  border: 1px solid var(--color-14);
+  border-radius: 10px;
+}
+.product a {
+  text-decoration: none;
+}
+.product .img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+.product .text {
+  padding: 16px;
+}
+.product .text .name {
+  margin: 0;
+  color: var(--color-1);
+  font-family: "Montserrat Alternates";
+  font-size: 24px;
+  font-weight: 700;
+}
+.product .text .desc {
+  font-size: 20px;
+  color: var(--color-1);
+}
+.product .text button {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-1);
+  padding: 10px;
+  border: 1px solid var(--color-15);
+  border-radius: 20px;
+  background-color: var(--color-4);
+}
+.product .text .vote {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-3);
+  display: flex;
+  gap: 6px;
+}
+.product .text .vote i {
+  font-size: 20px;
+  color: var(--color-3);
+}
+
+.product:first-of-type {
+  border-color: var(--color-13);
+  box-shadow: 0 0 1px 1px var(--color-13);
+}
+
+.detail-page .product {
+  border: none;
+  box-shadow: none;
+}
+.detail-page .product .img {
+  border-radius: 0;
+}
+.detail-page .product .vote {
+  margin-top: 0;
+  font-size: 24px;
+}
+.detail-page .product .vote i {
+  font-size: 30px;
+}
+.detail-page .product .name {
+  font-size: 32px;
+}
+.detail-page .product .desc {
+  font-size: 24px;
+}
+
+.filtered-products-page .main .filtered-products {
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 20px;
+}
+
+.models-3d-page .main .products {
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+}
+
+#home-alt .main .mask {
+  mask-image: linear-gradient(to top, black, transparent);
+  -webkit-mask-image: linear-gradient(to top, black, transparent);
+}
+
+#home .main h1,
+#home-alt .main h1 {
+  font-family: "Montserrat Alternates";
+  font-size: 40px;
+  font-weight: 700;
+  line-height: auto;
+  letter-spacing: 0;
+  color: var(--color-1);
+  margin: 0;
+}
+#home .main button,
+#home-alt .main button {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0;
+  color: var(--color-1);
+  text-transform: uppercase;
+  padding: 12px;
+  border: 2px solid var(--color-5);
+  background-color: var(--color-4);
+  transition: all 0.5s ease;
+}
+#home .main button:hover,
+#home-alt .main button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 2px 2px var(--color-10);
+}
+#home .main .intro,
+#home-alt .main .intro {
+  padding: 40px 20px;
+}
+#home .main img,
+#home-alt .main img {
+  width: 100%;
+  height: auto;
+}/*# sourceMappingURL=index.css.map */

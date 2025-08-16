@@ -93,9 +93,14 @@ body {
   color: var(--color-13);
 }
 
+.products {
+  padding: 40px 20px;
+}
+
 .product {
   border: 1px solid var(--color-14);
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 .product a {
   text-decoration: none;
@@ -106,7 +111,7 @@ body {
   border-radius: 10px 10px 0 0;
 }
 .product .text {
-  padding: 20px;
+  padding: 16px;
 }
 .product .text .name {
   margin: 0;
@@ -141,6 +146,28 @@ body {
 .product .text .vote i {
   font-size: 20px;
   color: var(--color-3);
+}
+
+.search {
+  padding: 0 20px;
+}
+.search input {
+  width: 100%;
+  height: 40px;
+  padding: 7px 18px;
+  border-radius: 20px;
+  background-color: #fff;
+  border: 1px solid var(--color-3);
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 12px;
+  color: #000;
+}
+.search input::-moz-placeholder {
+  color: #000;
+}
+.search input::placeholder {
+  color: #000;
 }
 
 .model-view .back-to-overview {
@@ -197,8 +224,8 @@ body {
 }
 
 .home-alt .main .mask {
-  mask-image: linear-gradient(to top, black, transparent);
   -webkit-mask-image: linear-gradient(to top, black, transparent);
+  mask-image: linear-gradient(to top, black, transparent);
 }
 
 .home .main h1,

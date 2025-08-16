@@ -31,6 +31,11 @@ html {
     color: var(--color-1);
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .header {
     display: flex;
     justify-content: flex-start;
@@ -107,7 +112,7 @@ html {
     }
 
     .text {
-        padding: 16px;
+        padding: 20px;
 
         .name {
             margin: 0;
@@ -127,10 +132,11 @@ html {
             font-size: 16px;
             font-weight: 400;
             color: var(--color-1);
-            padding: 10px;
             border: 1px solid var(--color-15);
             border-radius: 20px;
             background-color: var(--color-4);
+            width: 99px;
+            height: 31px;
         }
 
         .vote {
@@ -149,24 +155,40 @@ html {
     }
 }
 
-.product:first-of-type {
-    border-color: var(--color-13);
-    box-shadow: 0 0 1px 1px var(--color-13);
-}
 
-// Detail
-.detail-page {
+// model-view
+.model-view {
+    .back-to-overview {
+        padding: 0 20px;
+        background-color: #fff;
+        font-family: 'Albert Sans';
+        font-size: 14px;
+        letter-spacing: 5%;
+        text-transform: uppercase;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            color: var(--color-3);
+            text-decoration: none;
+        }
+    }
+
     .product {
         border: none;
         box-shadow: none;
 
         .img {
-            border-radius: 0;
+            border-radius: 2px;
+            padding: 0 20px;
         }
 
         .vote {
-            margin-top: 0;
+            font-family: 'Albert Sans';
             font-size: 24px;
+            font-weight: 400;
 
             i {
                 font-size: 30px;
@@ -183,8 +205,8 @@ html {
     }
 }
 
-// Filtered Products
-.filtered-products-page {
+// models-filtered-scrolled
+.models-filtered-scrolled {
     .main {
         .filtered-products {
             padding: 40px 20px;
@@ -195,8 +217,8 @@ html {
     }
 }
 
-// Products
-.models-3d-page {
+// models-filtered
+.models-filtered {
     .main {
         .products {
             padding: 40px 20px;
@@ -207,8 +229,8 @@ html {
     }
 }
 
-// Home alt
-#home-alt {
+// home-alt
+.home-alt {
     .main {
         .mask {
             mask-image: linear-gradient(to top, black, transparent);
@@ -217,9 +239,9 @@ html {
     }
 }
 
-// Home
-#home,
-#home-alt {
+// home
+.home,
+.home-alt {
     .main {
         h1 {
             font-family: 'Montserrat Alternates';

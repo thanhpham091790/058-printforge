@@ -14,6 +14,7 @@
   --color-13: #F77429;
   --color-14: #D1D1D1;
   --color-15: #A1A1A1;
+  --color-16: #DDDDDD;
 }
 
 *,
@@ -26,21 +27,19 @@ html {
   font-family: "Albert Sans";
   font-size: 24px;
   font-weight: 400;
-  line-height: auto;
-  letter-spacing: 0%;
   color: var(--color-1);
 }
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
 }
 
 .header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 6px 20px;
+  padding: 6px 0;
 }
 
 .nav {
@@ -69,7 +68,6 @@ body {
 }
 
 .nav-search {
-  padding: 0 20px;
   position: sticky;
   top: 0;
   overflow: hidden;
@@ -101,7 +99,7 @@ body {
 }
 
 .products {
-  padding: 40px 20px;
+  padding: 40px 0;
 }
 
 .product {
@@ -113,12 +111,7 @@ body {
   text-decoration: none;
 }
 .product .img {
-  width: 100%;
-  height: auto;
   border-radius: 10px 10px 0 0;
-}
-.product .text {
-  padding: 16px;
 }
 .product .text .name {
   margin: 0;
@@ -173,8 +166,66 @@ body {
   color: #000;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    padding: 0 40px;
+  }
+  .header {
+    height: 87px;
+  }
+  .home .main {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+  }
+  .home .intro {
+    order: 1;
+  }
+}
+.about-printforge h1 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 5%;
+  text-transform: uppercase;
+}
+.about-printforge h2 {
+  font-family: "Montserrat Alternates";
+  font-size: 40px;
+  font-weight: 700;
+}
+.about-printforge h3 {
+  font-family: "Montserrat Alternates";
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.features {
+  border-top: 1px solid var(--color-15);
+  border-bottom: 1px solid var(--color-15);
+}
+
+.our-vision p:first-of-type::after {
+  content: "";
+  display: block;
+  margin: 40px;
+  border-bottom: 1px solid var(--color-1);
+}
+.our-vision img {
+  max-width: 140px;
+  display: block;
+  margin: 0 auto;
+}
+
 .model-view .back-to-overview {
-  padding: 0 20px;
   background-color: #fff;
   font-family: "Albert Sans";
   font-size: 14px;
@@ -195,7 +246,6 @@ body {
 }
 .model-view .product .img {
   border-radius: 2px;
-  padding: 0 20px;
 }
 .model-view .product .vote {
   font-family: "Albert Sans";
@@ -213,14 +263,14 @@ body {
 }
 
 .models-filtered-scrolled .main .filtered-products {
-  padding: 40px 20px;
+  padding: 40px 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px 20px;
 }
 
 .models-filtered .main .products {
-  padding: 40px 20px;
+  padding: 40px 0;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 20px;
@@ -261,10 +311,5 @@ body {
 }
 .home .main .intro,
 .home-alt .main .intro {
-  padding: 40px 20px;
-}
-.home .main img,
-.home-alt .main img {
-  width: 100%;
-  height: auto;
+  padding: 40px 0;
 }/*# sourceMappingURL=index.css.map */

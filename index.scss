@@ -302,10 +302,14 @@ img {
     .main {
         .products {
             padding: 40px 0;
-            display: grid;
-            grid-template-columns: 1fr;
-            row-gap: 20px;
         }
+    }
+
+    h1 {
+        font-family: 'Montserrat Alternates';
+        font-size: 32px;
+        font-weight: 700;
+        text-transform: capitalize;
     }
 }
 
@@ -414,20 +418,14 @@ img {
     }
 
     // models-all
-    .models-all {
+    .models-all,
+    .models-filtered {
 
         .product-grid {
             padding: 0;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 40px;
-        }
-
-        h1 {
-            font-family: 'Montserrat Alternates';
-            font-size: 32px;
-            font-weight: 700;
-            text-transform: capitalize;
         }
 
         .product {

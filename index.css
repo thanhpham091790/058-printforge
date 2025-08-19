@@ -258,9 +258,12 @@ img {
 
 .models-filtered .main .products {
   padding: 40px 0;
-  display: grid;
-  grid-template-columns: 1fr;
-  row-gap: 20px;
+}
+.models-filtered h1 {
+  font-family: "Montserrat Alternates";
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: capitalize;
 }
 
 .home-alt .main .mask {
@@ -344,36 +347,38 @@ img {
     padding: 0;
     flex: 1 0 450px;
   }
-  .models-all .product-grid {
+  .models-all .product-grid,
+  .models-filtered .product-grid {
     padding: 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
   }
-  .models-all h1 {
-    font-family: "Montserrat Alternates";
-    font-size: 32px;
-    font-weight: 700;
-    text-transform: capitalize;
-  }
-  .models-all .product {
+  .models-all .product,
+  .models-filtered .product {
     border-radius: 8.92px;
     transition: all 0.5s ease;
   }
-  .models-all .product .text {
+  .models-all .product .text,
+  .models-filtered .product .text {
     padding: 10px;
   }
-  .models-all .product .text .name {
+  .models-all .product .text .name,
+  .models-filtered .product .text .name {
     font-size: 21.41px;
   }
-  .models-all .product .text .desc {
+  .models-all .product .text .desc,
+  .models-filtered .product .text .desc {
     font-size: 17.84px;
   }
   .models-all .product .text button,
-  .models-all .product .text .vote {
+  .models-all .product .text .vote,
+  .models-filtered .product .text button,
+  .models-filtered .product .text .vote {
     font-size: 14.27px;
   }
-  .models-all .product:hover {
+  .models-all .product:hover,
+  .models-filtered .product:hover {
     box-shadow: 2px 3px 8px 4px var(--color-11);
     transform: scale(1.06);
   }

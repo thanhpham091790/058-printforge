@@ -174,73 +174,6 @@ img {
   height: auto;
 }
 
-@media screen and (min-width: 1000px) {
-  body {
-    padding: 0 40px;
-  }
-  .header {
-    height: 87px;
-  }
-  .models-all .main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 80px;
-  }
-  .models-all .nav-search {
-    position: relative;
-  }
-  .models-all .sub-nav {
-    flex-direction: column;
-    height: auto;
-    align-items: flex-start;
-    width: 140px;
-  }
-  .models-all .product-grid {
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-  }
-  .models-all h1 {
-    font-family: "Montserrat Alternates";
-    font-size: 32px;
-    font-weight: 700;
-    text-transform: capitalize;
-  }
-  .models-all .product {
-    border-radius: 8.92px;
-    transition: all 0.5s ease;
-  }
-  .models-all .product .text {
-    padding: 10px;
-  }
-  .models-all .product .text .name {
-    font-size: 21.41px;
-  }
-  .models-all .product .text .desc {
-    font-size: 17.84px;
-  }
-  .models-all .product .text button,
-  .models-all .product .text .vote {
-    font-size: 14.27px;
-  }
-  .models-all .product:hover {
-    box-shadow: 2px 3px 8px 4px var(--color-11);
-    transform: scale(1.06);
-  }
-  .home .main {
-    display: flex;
-    flex-direction: row-reverse;
-    padding: 40px;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
-  }
-  .home .intro {
-    order: 1;
-  }
-}
 .about-printforge h1 {
   margin: 0;
   font-size: 14px;
@@ -312,6 +245,9 @@ img {
 .model-view .product .desc {
   font-size: 24px;
 }
+.model-view .product .date {
+  font-size: 16px;
+}
 
 .models-filtered-scrolled .main .filtered-products {
   padding: 40px 0;
@@ -363,4 +299,93 @@ img {
 .home .main .intro,
 .home-alt .main .intro {
   padding: 40px 0;
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    padding: 0 40px;
+  }
+  .header {
+    height: 87px;
+  }
+  .main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 80px;
+  }
+  .nav-search {
+    position: relative;
+  }
+  .sub-nav {
+    flex-direction: column;
+    height: auto;
+    align-items: flex-start;
+    width: 140px;
+  }
+  .sub-nav a:hover,
+  .sub-nav .active {
+    border-left: 1px solid var(--color-13);
+    padding-left: 10px;
+  }
+  .model-view .detail {
+    flex-grow: 1;
+  }
+  .model-view .back-to-overview {
+    display: none;
+  }
+  .model-view .product {
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+    align-items: center;
+  }
+  .model-view .product .text {
+    padding: 0;
+    flex: 1 0 450px;
+  }
+  .models-all .product-grid {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+  .models-all h1 {
+    font-family: "Montserrat Alternates";
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  .models-all .product {
+    border-radius: 8.92px;
+    transition: all 0.5s ease;
+  }
+  .models-all .product .text {
+    padding: 10px;
+  }
+  .models-all .product .text .name {
+    font-size: 21.41px;
+  }
+  .models-all .product .text .desc {
+    font-size: 17.84px;
+  }
+  .models-all .product .text button,
+  .models-all .product .text .vote {
+    font-size: 14.27px;
+  }
+  .models-all .product:hover {
+    box-shadow: 2px 3px 8px 4px var(--color-11);
+    transform: scale(1.06);
+  }
+  .home .main {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+  }
+  .home .intro {
+    order: 1;
+  }
 }/*# sourceMappingURL=index.css.map */

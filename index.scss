@@ -121,6 +121,8 @@ body {
     }
 
     .text {
+        padding: 20px;
+
         .name {
             margin: 0;
             color: var(--color-1);
@@ -193,6 +195,72 @@ img {
     .header {
         height: 87px;
     }
+
+    // models-all
+    .models-all {
+
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 80px;
+        }
+
+        .nav-search {
+            position: relative;
+        }
+
+        .sub-nav {
+            flex-direction: column;
+            height: auto;
+            align-items: flex-start;
+            width: 140px;
+        }
+
+        .product-grid {
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+
+        h1 {
+            font-family: 'Montserrat Alternates';
+            font-size: 32px;
+            font-weight: 700;
+            text-transform: capitalize;
+        }
+
+        .product {
+            border-radius: 8.92px;
+            transition: all 0.5s ease;
+
+            .text {
+                padding: 10px;
+
+                .name {
+                    font-size: 21.41px;
+                }
+
+                .desc {
+                    font-size: 17.84px;
+                }
+
+                button,
+                .vote {
+                    font-size: 14.27px;
+                }
+            }
+        }
+
+        .product:hover {
+            box-shadow: 2px 3px 8px 4px var(--color-11);
+            transform: scale(1.06);
+        }
+
+    }
+
+    // home
 
     .home {
         .main {

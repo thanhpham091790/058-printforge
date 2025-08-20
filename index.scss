@@ -371,15 +371,10 @@ img {
         height: 87px;
     }
 
-    .main {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 80px;
-    }
-
     .nav-search {
         position: relative;
+        flex-shrink: 0;
+        flex-basis: 140px;
     }
 
     .sub-nav {
@@ -414,6 +409,94 @@ img {
         }
     }
 
+    // about
+    .about {
+        .header {
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            z-index: 10;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .our-vision {
+            max-width: 800px;
+
+            h2 {
+                font-size: 56px;
+            }
+
+            p {
+                font-size: 28px;
+            }
+
+            p:first-of-type::after {
+                width: 30%;
+                margin: 40px auto;
+            }
+
+            img {
+                margin: 100px auto;
+            }
+        }
+
+        .about-printforge,
+        .features {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            h3 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 20px;
+                word-break: keep-all;
+            }
+        }
+
+        .model-available,
+        .active-community,
+        .free-to-use {
+            padding: 60px;
+
+        }
+
+        .about-printforge {
+            gap: 100px;
+
+            img {
+                flex: 1 0 627px;
+                padding-left: 40px;
+            }
+
+            .text {
+                flex: 1 1 600px;
+                padding-right: 60px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            h2 {
+                font-size: 56px;
+            }
+
+            p {
+                font-size: 28px;
+            }
+        }
+    }
+
     // model-view
     .model-view {
         .detail {
@@ -441,6 +524,12 @@ img {
     .models-all,
     .models-filtered,
     .models-filtered-search {
+        .main {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 80px;
+        }
 
         .product-grid {
             padding: 0;

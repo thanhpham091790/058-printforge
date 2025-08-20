@@ -315,14 +315,10 @@ img {
   .header {
     height: 87px;
   }
-  .main {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 80px;
-  }
   .nav-search {
     position: relative;
+    flex-shrink: 0;
+    flex-basis: 140px;
   }
   .sub-nav {
     flex-direction: column;
@@ -351,6 +347,75 @@ img {
     order: 2;
     max-width: 300px;
   }
+  .about .header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 10;
+  }
+  .about .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  .about .our-vision {
+    max-width: 800px;
+  }
+  .about .our-vision h2 {
+    font-size: 56px;
+  }
+  .about .our-vision p {
+    font-size: 28px;
+  }
+  .about .our-vision p:first-of-type::after {
+    width: 30%;
+    margin: 40px auto;
+  }
+  .about .our-vision img {
+    margin: 100px auto;
+  }
+  .about .about-printforge,
+  .about .features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about .about-printforge h3,
+  .about .features h3 {
+    font-size: 28px;
+  }
+  .about .about-printforge p,
+  .about .features p {
+    font-size: 20px;
+    word-break: keep-all;
+  }
+  .about .model-available,
+  .about .active-community,
+  .about .free-to-use {
+    padding: 60px;
+  }
+  .about .about-printforge {
+    gap: 100px;
+  }
+  .about .about-printforge img {
+    flex: 1 0 627px;
+    padding-left: 40px;
+  }
+  .about .about-printforge .text {
+    flex: 1 1 600px;
+    padding-right: 60px;
+  }
+  .about .about-printforge h1 {
+    font-size: 20px;
+  }
+  .about .about-printforge h2 {
+    font-size: 56px;
+  }
+  .about .about-printforge p {
+    font-size: 28px;
+  }
   .model-view .detail {
     flex-grow: 1;
   }
@@ -366,6 +431,14 @@ img {
   .model-view .product .text {
     padding: 0;
     flex: 1 0 450px;
+  }
+  .models-all .main,
+  .models-filtered .main,
+  .models-filtered-search .main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 80px;
   }
   .models-all .product-grid,
   .models-filtered .product-grid,

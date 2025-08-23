@@ -331,11 +331,9 @@ img {
 
 // home-alt
 .home-alt {
-    .main {
-        .mask {
-            -webkit-mask-image: linear-gradient(to top, black, transparent);
-            mask-image: linear-gradient(to top, black, transparent);
-        }
+    .mask-image {
+        -webkit-mask-image: linear-gradient(to top, black, transparent);
+        mask-image: linear-gradient(to top, black, transparent);
     }
 }
 
@@ -344,6 +342,10 @@ img {
 .home-alt {
     .intro {
         padding: 40px 20px;
+    }
+
+    .desktop-only {
+        display: none;
     }
 
     h1 {

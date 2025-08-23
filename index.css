@@ -285,7 +285,7 @@ img {
   text-transform: capitalize;
 }
 
-.home-alt .main .mask {
+.home-alt .mask-image {
   -webkit-mask-image: linear-gradient(to top, black, transparent);
   mask-image: linear-gradient(to top, black, transparent);
 }
@@ -293,6 +293,10 @@ img {
 .home .intro,
 .home-alt .intro {
   padding: 40px 20px;
+}
+.home .desktop-only,
+.home-alt .desktop-only {
+  display: none;
 }
 .home h1,
 .home-alt h1 {

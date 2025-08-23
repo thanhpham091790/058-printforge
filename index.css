@@ -30,36 +30,51 @@ html {
   color: var(--color-1);
 }
 
-body {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
-  padding: 0 20px;
+  padding: 0;
+}
+
+button {
+  font-family: inherit;
 }
 
 .header {
+  height: 60px;
+  padding: 6px 20px;
+  background-color: var(--color-4);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  -o-border-image: linear-gradient(90deg, #fff 0%, #000000 50%, #ffffff 100%);
+     border-image: linear-gradient(90deg, #fff 0%, #000000 50%, #ffffff 100%);
+  border-image-slice: 1;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 6px 0;
 }
 
 .nav {
-  flex-basis: 50%;
-  margin-left: auto;
+  flex-grow: 1;
   display: flex;
   justify-content: flex-end;
   gap: 40px;
 }
 .nav a {
-  flex-shrink: 0;
+  display: inline-block;
+  padding: 8px 0;
   text-decoration: none;
   color: var(--color-3);
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 5%;
-  display: flex;
-  align-items: center;
-  padding: 8px 0;
 }
 .nav a:hover,
 .nav .active {
@@ -275,37 +290,37 @@ img {
   mask-image: linear-gradient(to top, black, transparent);
 }
 
-.home .main h1,
-.home-alt .main h1 {
+.home .intro,
+.home-alt .intro {
+  padding: 40px 20px;
+}
+.home h1,
+.home-alt h1 {
   font-family: "Montserrat Alternates";
   font-size: 40px;
   font-weight: 700;
-  line-height: auto;
-  letter-spacing: 0;
-  color: var(--color-1);
-  margin: 0;
+  margin-bottom: 20px;
 }
-.home .main button,
-.home-alt .main button {
-  font-family: inherit;
+.home p,
+.home-alt p {
+  margin-bottom: 40px;
+}
+.home button,
+.home-alt button {
+  width: 199px;
+  height: 48px;
+  padding: 12px;
+  background-color: var(--color-4);
+  border: 2px solid var(--color-5);
   font-weight: 600;
   font-size: 20px;
-  letter-spacing: 0;
-  color: var(--color-1);
   text-transform: uppercase;
-  padding: 12px;
-  border: 2px solid var(--color-5);
-  background-color: var(--color-4);
-  transition: all 0.5s ease;
+  letter-spacing: -2%;
 }
-.home .main button:hover,
-.home-alt .main button:hover {
+.home button:hover,
+.home-alt button:hover {
   cursor: pointer;
   box-shadow: 0 0 2px 2px var(--color-10);
-}
-.home .main .intro,
-.home-alt .main .intro {
-  padding: 40px 0;
 }
 
 @media screen and (min-width: 1000px) {
@@ -490,6 +505,9 @@ img {
     justify-content: center;
     align-items: center;
     gap: 100px;
+  }
+  .home img {
+    max-width: 729px;
   }
   .home .intro {
     order: 1;

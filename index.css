@@ -82,31 +82,25 @@ button {
   border-bottom: 1px solid var(--color-13);
 }
 
-.nav-search {
-  position: sticky;
-  top: 0;
-  overflow: hidden;
-  background-color: #fff;
-  z-index: 10;
-}
-
 .sub-nav {
+  height: 60px;
+  padding: 0 20px;
   background-color: var(--color-4);
+  overflow: auto;
+  white-space: nowrap;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   gap: 20px;
-  overflow-x: scroll;
-  height: 60px;
+  position: relative;
 }
 .sub-nav a {
-  flex-grow: 1;
-  flex-shrink: 0;
-  text-decoration: none;
-  font-size: 14px;
+  display: inline-block;
+  font-family: "Albert Sans";
   font-weight: 500;
+  font-size: 14px;
   letter-spacing: 5%;
   color: var(--color-3);
+  text-decoration: none;
   text-transform: uppercase;
 }
 .sub-nav a:hover,
@@ -114,52 +108,105 @@ button {
   color: var(--color-13);
 }
 
-.product {
-  border: 1px solid var(--color-14);
-  border-radius: 10px;
-  margin-bottom: 20px;
+.sub-nav::before,
+.sub-nav::after {
+  content: "";
+  position: fixed;
+  display: inline-block;
+  width: 60px;
+  height: 50px;
 }
-.product a {
-  text-decoration: none;
+
+.sub-nav::before {
+  top: 60px;
+  left: 0;
+  background-image: linear-gradient(to right, white, transparent);
+}
+
+.sub-nav::after {
+  top: 60px;
+  right: 0;
+  background-image: linear-gradient(to left, white, transparent);
+}
+
+.products {
+  padding: 40px 20px;
+  position: relative;
+}
+
+.products::after {
+  content: "";
+  display: block;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background-image: linear-gradient(to top, white, transparent);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.product {
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  border-color: var(--color-14);
+  border-radius: 10px;
 }
 .product .img {
   border-radius: 10px 10px 0 0;
 }
 .product .text {
-  padding: 20px;
+  padding: 16px;
+  border-radius: 0 0 10px 10px;
+  background-color: var(--color-4);
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  border-color: var(--color-15);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 .product .text .name {
-  margin: 0;
-  color: var(--color-1);
   font-family: "Montserrat Alternates";
   font-size: 24px;
   font-weight: 700;
 }
 .product .text .desc {
   font-size: 20px;
-  color: var(--color-1);
 }
 .product .text button {
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 400;
-  color: var(--color-1);
-  border: 1px solid var(--color-15);
-  border-radius: 20px;
-  background-color: var(--color-4);
   width: 99px;
   height: 31px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid var(--color-15);
+  background-color: var(--color-4);
+  color: var(--color-1);
+  font-size: 16px;
+  letter-spacing: -2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product .text button:hover {
+  background-color: var(--color-15);
+  cursor: pointer;
 }
 .product .text .vote {
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 400;
-  color: var(--color-3);
   display: flex;
+  align-items: center;
   gap: 6px;
 }
-.product .text .vote i {
-  font-size: 20px;
+.product .text .vote .fa-heart {
+  color: var(--color-15);
+  transform: scale(0.86375, 0.72625);
+}
+.product .text .vote .num {
+  font-size: 16px;
   color: var(--color-3);
 }
 

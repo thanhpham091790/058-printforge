@@ -91,7 +91,9 @@ button {
   display: flex;
   align-items: center;
   gap: 20px;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 .sub-nav a {
   display: inline-block;
@@ -115,16 +117,15 @@ button {
   display: inline-block;
   width: 60px;
   height: 50px;
+  top: 60px;
 }
 
 .sub-nav::before {
-  top: 60px;
   left: 0;
   background-image: linear-gradient(to right, white, transparent);
 }
 
 .sub-nav::after {
-  top: 60px;
   right: 0;
   background-image: linear-gradient(to left, white, transparent);
 }
@@ -132,6 +133,14 @@ button {
 .products {
   padding: 40px 20px;
   position: relative;
+}
+
+.scrolled .sub-nav::before,
+.scrolled .sub-nav::after {
+  top: 0;
+}
+.scrolled .products {
+  padding: 20px;
 }
 
 .models-filtered-search .products {
@@ -199,15 +208,15 @@ button {
   flex-direction: column;
   gap: 18px;
 }
-.product .text .name {
+.product .name {
   font-family: "Montserrat Alternates";
   font-size: 24px;
   font-weight: 700;
 }
-.product .text .desc {
+.product .desc {
   font-size: 20px;
 }
-.product .text button {
+.product button {
   width: 99px;
   height: 31px;
   padding: 10px;
@@ -221,22 +230,33 @@ button {
   justify-content: center;
   align-items: center;
 }
-.product .text button:hover {
+.product button:hover {
   background-color: var(--color-15);
   cursor: pointer;
 }
-.product .text .vote {
+.product .vote {
   display: flex;
   align-items: center;
   gap: 6px;
 }
-.product .text .vote .fa-heart {
+.product .fa-heart {
   color: var(--color-15);
   transform: scale(0.86375, 0.72625);
 }
-.product .text .vote .num {
+.product .num {
   font-size: 16px;
   color: var(--color-3);
+}
+
+.scrolled .product-grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 20px;
+}
+.scrolled .product .name {
+  font-size: 20px;
+}
+.scrolled .product .desc {
+  display: none;
 }
 
 .search {
@@ -267,6 +287,7 @@ button {
 }
 
 img {
+  display: block;
   width: 100%;
   height: auto;
 }

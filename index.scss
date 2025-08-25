@@ -85,7 +85,6 @@ button {
 }
 
 .sub-nav {
-
     height: 60px;
     padding: 0 20px;
     background-color: var(--color-4);
@@ -94,7 +93,10 @@ button {
     display: flex;
     align-items: center;
     gap: 20px;
-    position: relative;
+
+    position: sticky;
+    top: 0;
+    z-index: 1;
 
     a {
         display: inline-block;
@@ -120,16 +122,15 @@ button {
     display: inline-block;
     width: 60px;
     height: 50px;
+    top: 60px;
 }
 
 .sub-nav::before {
-    top: 60px;
     left: 0;
     background-image: linear-gradient(to right, white, transparent);
 }
 
 .sub-nav::after {
-    top: 60px;
     right: 0;
     background-image: linear-gradient(to left, white, transparent);
 }
@@ -138,6 +139,19 @@ button {
     padding: 40px 20px;
     position: relative;
 }
+
+.scrolled {
+
+    .sub-nav::before,
+    .sub-nav::after {
+        top: 0;
+    }
+
+    .products {
+        padding: 20px;
+    }
+}
+
 
 .models-filtered-search {
     .products {
@@ -203,52 +217,70 @@ button {
         display: flex;
         flex-direction: column;
         gap: 18px;
+    }
 
+    .name {
+        font-family: 'Montserrat Alternates';
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .desc {
+        font-size: 20px;
+    }
+
+    button {
+        width: 99px;
+        height: 31px;
+        padding: 10px;
+        border-radius: 20px;
+        border: 1px solid var(--color-15);
+        background-color: var(--color-4);
+        color: var(--color-1);
+        font-size: 16px;
+        letter-spacing: -2%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    button:hover {
+        background-color: var(--color-15);
+        cursor: pointer;
+    }
+
+    .vote {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .fa-heart {
+        color: var(--color-15);
+        transform: scale(0.86375, 0.72625);
+    }
+
+    .num {
+        font-size: 16px;
+        color: var(--color-3);
+    }
+}
+
+.scrolled {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 20px;
+
+    }
+
+    .product {
         .name {
-            font-family: 'Montserrat Alternates';
-            font-size: 24px;
-            font-weight: 700;
-        }
-
-        .desc {
             font-size: 20px;
         }
 
-        button {
-            width: 99px;
-            height: 31px;
-            padding: 10px;
-            border-radius: 20px;
-            border: 1px solid var(--color-15);
-            background-color: var(--color-4);
-            color: var(--color-1);
-            font-size: 16px;
-            letter-spacing: -2%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-        }
-
-        button:hover {
-            background-color: var(--color-15);
-            cursor: pointer;
-        }
-
-        .vote {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-
-            .fa-heart {
-                color: var(--color-15);
-                transform: scale(0.86375, 0.72625);
-            }
-
-            .num {
-                font-size: 16px;
-                color: var(--color-3);
-            }
+        .desc {
+            display: none;
         }
     }
 }
@@ -281,6 +313,7 @@ button {
 }
 
 img {
+    display: block;
     width: 100%;
     height: auto;
 }

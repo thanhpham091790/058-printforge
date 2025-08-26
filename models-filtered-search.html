@@ -14,6 +14,7 @@
 
     <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/e86c2ba286.js" crossorigin="anonymous"></script>
+    <script src="index.js" defer></script>
 </head>
 
 <body class="models-filtered-search">
@@ -41,7 +42,11 @@
         </nav>
         <div class="products">
             <!-- <h1>3D Models</h1> -->
-            <input type="text" name="search" placeholder="Search for a model" />
+            <div class="wrapper">
+                <div class="search">
+                    <input type="text" name="search" placeholder="Search for a model" />
+                </div>
+            </div>
             <div class="product-grid">
                 <div class="product">
                     <img class="img" src="./assets/3d-models.png" alt="3D models product image." />

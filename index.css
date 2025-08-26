@@ -321,42 +321,89 @@ input[type=text]::placeholder {
 }
 
 .model-view .back-to-overview {
-  background-color: #fff;
-  font-family: "Albert Sans";
-  font-size: 14px;
-  letter-spacing: 5%;
-  text-transform: uppercase;
   height: 60px;
+  padding: 0 20px;
+  background-color: var(--color-4);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.model-view .back-to-overview a {
+.model-view a {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 5%;
   color: var(--color-3);
   text-decoration: none;
+  text-transform: uppercase;
 }
-.model-view .product {
-  border: none;
-  box-shadow: none;
+.model-view img {
+  padding: 0 20px;
 }
-.model-view .product .img {
-  border-radius: 2px;
+.model-view .text {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 39px;
 }
-.model-view .product .vote {
-  font-family: "Albert Sans";
-  font-size: 24px;
+.model-view .content {
+  height: 354px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.model-view .vote {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.model-view .likes {
+  display: flex;
+  gap: 6px;
+}
+.model-view i {
+  width: 32px;
+  height: 32px;
+  font-size: 28px;
+  color: var(--color-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.model-view .num {
+  font-family: inherit;
   font-weight: 400;
-}
-.model-view .product .vote i {
-  font-size: 30px;
-}
-.model-view .product .name {
-  font-size: 32px;
-}
-.model-view .product .desc {
   font-size: 24px;
+  color: var(--color-3);
 }
-.model-view .product .date {
+.model-view .name {
+  font-family: "Montserrat Alternates";
+  font-weight: 700;
+  font-size: 32px;
+  color: var(--color-1);
+}
+.model-view .buttons {
+  height: 31px;
+  display: flex;
+  gap: 6px;
+}
+.model-view button {
+  width: 99px;
+  height: 31px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid var(--color-15);
+  font-family: "Albert Sans";
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -2%;
+  color: var(--color-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-4);
+}
+.model-view .date {
   font-size: 16px;
 }
 
@@ -524,22 +571,6 @@ input[type=text]::placeholder {
   }
   .about .about-printforge p {
     font-size: 28px;
-  }
-  .model-view .detail {
-    flex-grow: 1;
-  }
-  .model-view .back-to-overview {
-    display: none;
-  }
-  .model-view .product {
-    display: flex;
-    justify-content: flex-start;
-    gap: 40px;
-    align-items: center;
-  }
-  .model-view .product .text {
-    padding: 0;
-    flex: 1 0 450px;
   }
   .models-all .main,
   .models-filtered .main,

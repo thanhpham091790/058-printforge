@@ -309,47 +309,98 @@ input[type='text']::placeholder {
 }
 
 // about
-.about-printforge {
+.about {
+    img {
+        padding: 0 20px;
+    }
+
+    .wrapper {
+        all: unset;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .mission {
+        padding: 0 20px;
+    }
+
+    .mission-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
     h1 {
-        margin: 0;
-        font-size: 14px;
+        font-family: inherit;
         font-weight: 500;
+        font-size: 14px;
         letter-spacing: 5%;
         text-transform: uppercase;
     }
 
     h2 {
         font-family: 'Montserrat Alternates';
-        font-size: 40px;
         font-weight: 700;
+        font-size: 40px;
+    }
+
+    .line {
+        margin: 20px 0;
+        border: 1px solid var(--color-16)
+    }
+
+    .features {
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
     }
 
     h3 {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    i {
+        width: 32px;
+        height: 32px;
+        font-size: 28px;
+    }
+
+    .feature-name {
         font-family: 'Montserrat Alternates';
         font-weight: 700;
         font-size: 28px;
     }
 
-}
-
-.features {
-    border-top: 1px solid var(--color-15);
-    border-bottom: 1px solid var(--color-15);
-}
-
-.our-vision {
-    p:first-of-type::after {
-        content: '';
-        display: block;
-        margin: 40px;
-        border-bottom: 1px solid var(--color-1);
+    .card p {
+        font-size: 20px;
     }
 
-    img {
-        max-width: 140px;
-        display: block;
-        margin: 0 auto;
+    .vision {
+        padding: 0 20px;
     }
+
+    .vision-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .line {
+            width: 66%;
+            margin: 20px auto;
+        }
+    }
+
 }
 
 

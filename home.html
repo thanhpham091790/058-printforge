@@ -16,7 +16,11 @@
 <body class="home">
     <header class="header">
         <a class="logo-link" href="#">
-            <img class="logo-image" src="assets/printforge-logo-mobile.png" alt="Printforge logo for mobile devices." />
+            <picture class="logo-image">
+                <source media="(width < 402px)" srcset="assets/printforge-logo-mobile.png" />
+                <source media="(width >= 1500px)" srcset="assets/printforge-logo-desktop.png" />
+                <img src="assets/printforge-logo-mobile.png" alt="Printforge logo for mobile devices." />
+            </picture>
         </a>
         <nav class="nav">
             <a class="nav-link" href="#">3D Models</a>
@@ -25,12 +29,18 @@
     </header>
     <main class="main">
         <div class="intro">
-            <p class="desktop-only">Your go-to platform for 3D printing files</p>
-            <h1>Discover what’s possible with 3D printing</h1>
-            <p>Join our community of creators and explore a vast library of user-submitted models.</p>
+            <div class="text">
+                <p class="desktop-only">Your go-to platform for 3D printing files</p>
+                <h1>Discover what’s possible with 3D printing</h1>
+                <p>Join our community of creators and explore a vast library of user-submitted models.</p>
+            </div>
             <button type="button">Browse models</button>
         </div>
-        <img src="assets/home-image.png" alt="Picture at home page." />
+        <picture>
+            <source media="(width < 402px)" srcset="assets/home-image-mobile.png" />
+            <source media="(width >= 1500px)" srcset="assets/home-image-desktop.png" />
+            <img src="assets/home-image-mobile.png" alt="Hero image at home page" />
+        </picture>
     </main>
 </body>
 

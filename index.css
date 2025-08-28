@@ -505,12 +505,19 @@ input[type=text]::placeholder {
   box-shadow: 0 0 2px 2px var(--color-10);
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1512px) {
   body {
-    padding: 0 40px;
+    max-width: 1512px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: var(--color-4);
   }
   .header {
     height: 87px;
+    gap: 6px;
+    padding: 6px 40px;
+    background-color: var(--color-4);
   }
   .nav-search {
     position: relative;
@@ -665,6 +672,7 @@ input[type=text]::placeholder {
     transform: scale(1.06);
   }
   .home .main {
+    min-height: 707px;
     display: flex;
     flex-direction: row-reverse;
     padding: 40px;
@@ -672,10 +680,33 @@ input[type=text]::placeholder {
     align-items: center;
     gap: 100px;
   }
-  .home img {
-    max-width: 729px;
-  }
   .home .intro {
     order: 1;
+    flex: 0 0 600px;
+    height: 452px;
+    display: flex;
+    flex-direction: column;
+    gap: 73px;
+    padding: 0;
+  }
+  .home .text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .home .desktop-only {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 5%;
+    text-transform: uppercase;
+  }
+  .home h1 {
+    font-size: 56px;
+    margin: 0;
+  }
+  .home p {
+    margin: 0;
+    font-size: 28px;
   }
 }/*# sourceMappingURL=index.css.map */

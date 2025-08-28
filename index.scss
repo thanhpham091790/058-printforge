@@ -579,13 +579,20 @@ input[type='text']::placeholder {
     }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1512px) {
     body {
-        padding: 0 40px;
+        max-width: 1512px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        background-color: var(--color-4);
     }
 
     .header {
         height: 87px;
+        gap: 6px;
+        padding: 6px 40px;
+        background-color: var(--color-4);
     }
 
     .nav-search {
@@ -765,6 +772,7 @@ input[type='text']::placeholder {
 
     .home {
         .main {
+            min-height: 707px;
             display: flex;
             flex-direction: row-reverse;
             padding: 40px;
@@ -773,12 +781,38 @@ input[type='text']::placeholder {
             gap: 100px;
         }
 
-        img {
-            max-width: 729px;
-        }
-
         .intro {
             order: 1;
+            flex: 0 0 600px;
+            height: 452px;
+            display: flex;
+            flex-direction: column;
+            gap: 73px;
+            padding: 0;
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .desktop-only {
+            display: block;
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 5%;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 56px;
+            margin: 0;
+        }
+
+        p {
+            margin: 0;
+            font-size: 28px;
         }
     }
 

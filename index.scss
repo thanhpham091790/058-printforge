@@ -42,6 +42,18 @@ p {
     padding: 0;
 }
 
+body::after {
+    content: "";
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 1512px;
+    height: 100px;
+    background-image: linear-gradient(to top, white, transparent);
+    z-index: 1;
+}
+
 button {
     font-family: inherit;
 }
@@ -188,16 +200,6 @@ input[type='text']::placeholder {
 
 }
 
-.products::after {
-    content: '';
-    display: block;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    background-image: linear-gradient(to top, white, transparent);
-}
-
 .product-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -216,11 +218,6 @@ input[type='text']::placeholder {
 
     .text {
         padding: 16px;
-        border-radius: 0 0 10px 10px;
-        background-color: var(--color-4);
-        border-width: 0 1px 1px 1px;
-        border-style: solid;
-        border-color: var(--color-15);
         display: flex;
         flex-direction: column;
         gap: 18px;
@@ -586,6 +583,11 @@ input[type='text']::placeholder {
         flex-direction: column;
         gap: 40px;
         background-color: var(--color-4);
+        margin: 0 auto;
+    }
+
+    body::after {
+        height: 184px;
     }
 
     .header {
@@ -602,10 +604,11 @@ input[type='text']::placeholder {
     }
 
     .sub-nav {
+        flex: 0 0 140px;
         flex-direction: column;
         height: auto;
         align-items: flex-start;
-        width: 140px;
+        padding: 0;
 
         a:hover,
         .active {
@@ -730,21 +733,49 @@ input[type='text']::placeholder {
             justify-content: flex-start;
             align-items: center;
             gap: 80px;
+            padding: 40px
+        }
+
+        .products {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .sticky-bar {
+            height: 79px;
+            padding: 20px 0;
+        }
+
+        h1 {
+            font-family: 'Montserrat Alternates';
+            font-weight: 700;
+            font-size: 32px;
         }
 
         .product-grid {
-            padding: 0;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 40px;
+            row-gap: 56px;
+            column-gap: auto;
         }
 
         .product {
+            width: 267.65px;
             border-radius: 8.92px;
+            border-width: 0 0.89px 0.89px 0.89px;
+            border-color: transparent;
             transition: all 0.5s ease;
+            z-index: 1;
 
             .text {
-                padding: 10px;
+                padding: 14.27px;
+                background-color: var(--color-4);
+                border-width: 0 0.89px 0.89px 0.89px;
+                border-style: solid;
+                border-color: var(--color-15);
+                border-radius: 0 0 8.92px 8.92px;
 
                 .name {
                     font-size: 21.41px;
@@ -758,6 +789,25 @@ input[type='text']::placeholder {
                 .vote {
                     font-size: 14.27px;
                 }
+
+                .vote {
+                    gap: 5.35px;
+                }
+
+                i {
+                    width: 18.5px;
+                    height: 15.55px;
+                    font-size: 16px;
+                    display: flex;
+                    justify-content: center;
+                    align-content: center;
+                }
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+                gap: 16.06px;
             }
         }
 

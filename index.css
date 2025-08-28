@@ -42,6 +42,18 @@ p {
   padding: 0;
 }
 
+body::after {
+  content: "";
+  display: block;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 1512px;
+  height: 100px;
+  background-image: linear-gradient(to top, white, transparent);
+  z-index: 1;
+}
+
 button {
   font-family: inherit;
 }
@@ -186,16 +198,6 @@ input[type=text]::placeholder {
   padding: 0 20px;
 }
 
-.products::after {
-  content: "";
-  display: block;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 100px;
-  background-image: linear-gradient(to top, white, transparent);
-}
-
 .product-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -213,11 +215,6 @@ input[type=text]::placeholder {
 }
 .product .text {
   padding: 16px;
-  border-radius: 0 0 10px 10px;
-  background-color: var(--color-4);
-  border-width: 0 1px 1px 1px;
-  border-style: solid;
-  border-color: var(--color-15);
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -512,6 +509,10 @@ input[type=text]::placeholder {
     flex-direction: column;
     gap: 40px;
     background-color: var(--color-4);
+    margin: 0 auto;
+  }
+  body::after {
+    height: 184px;
   }
   .header {
     height: 87px;
@@ -525,10 +526,11 @@ input[type=text]::placeholder {
     flex-basis: 140px;
   }
   .sub-nav {
+    flex: 0 0 140px;
     flex-direction: column;
     height: auto;
     align-items: flex-start;
-    width: 140px;
+    padding: 0;
   }
   .sub-nav a:hover,
   .sub-nav .active {
@@ -627,25 +629,57 @@ input[type=text]::placeholder {
     justify-content: flex-start;
     align-items: center;
     gap: 80px;
+    padding: 40px;
+  }
+  .models-all .products,
+  .models-filtered .products,
+  .models-filtered-search .products {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .models-all .sticky-bar,
+  .models-filtered .sticky-bar,
+  .models-filtered-search .sticky-bar {
+    height: 79px;
+    padding: 20px 0;
+  }
+  .models-all h1,
+  .models-filtered h1,
+  .models-filtered-search h1 {
+    font-family: "Montserrat Alternates";
+    font-weight: 700;
+    font-size: 32px;
   }
   .models-all .product-grid,
   .models-filtered .product-grid,
   .models-filtered-search .product-grid {
-    padding: 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    row-gap: 56px;
+    -moz-column-gap: auto;
+         column-gap: auto;
   }
   .models-all .product,
   .models-filtered .product,
   .models-filtered-search .product {
+    width: 267.65px;
     border-radius: 8.92px;
+    border-width: 0 0.89px 0.89px 0.89px;
+    border-color: transparent;
     transition: all 0.5s ease;
+    z-index: 1;
   }
   .models-all .product .text,
   .models-filtered .product .text,
   .models-filtered-search .product .text {
-    padding: 10px;
+    padding: 14.27px;
+    background-color: var(--color-4);
+    border-width: 0 0.89px 0.89px 0.89px;
+    border-style: solid;
+    border-color: var(--color-15);
+    border-radius: 0 0 8.92px 8.92px;
   }
   .models-all .product .text .name,
   .models-filtered .product .text .name,
@@ -664,6 +698,28 @@ input[type=text]::placeholder {
   .models-filtered-search .product .text button,
   .models-filtered-search .product .text .vote {
     font-size: 14.27px;
+  }
+  .models-all .product .text .vote,
+  .models-filtered .product .text .vote,
+  .models-filtered-search .product .text .vote {
+    gap: 5.35px;
+  }
+  .models-all .product .text i,
+  .models-filtered .product .text i,
+  .models-filtered-search .product .text i {
+    width: 18.5px;
+    height: 15.55px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .models-all .product .content,
+  .models-filtered .product .content,
+  .models-filtered-search .product .content {
+    display: flex;
+    flex-direction: column;
+    gap: 16.06px;
   }
   .models-all .product:hover,
   .models-filtered .product:hover,

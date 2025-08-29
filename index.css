@@ -667,7 +667,6 @@ input[type=text]::placeholder {
     width: 267.65px;
     border-radius: 8.92px;
     border-width: 0 0.89px 0.89px 0.89px;
-    border-color: transparent;
     transition: all 0.5s ease;
     z-index: 1;
   }
@@ -675,11 +674,6 @@ input[type=text]::placeholder {
   .models-filtered .product .text,
   .models-filtered-search .product .text {
     padding: 14.27px;
-    background-color: var(--color-4);
-    border-width: 0 0.89px 0.89px 0.89px;
-    border-style: solid;
-    border-color: var(--color-15);
-    border-radius: 0 0 8.92px 8.92px;
   }
   .models-all .product .text .name,
   .models-filtered .product .text .name,

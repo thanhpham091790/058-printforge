@@ -153,13 +153,6 @@ img {
   position: relative;
 }
 
-.wrapper {
-  height: 52px;
-  padding: 0 0 12px 0;
-  background-color: var(--color-4);
-  margin-bottom: 20px;
-}
-
 .search {
   height: 40px;
   padding: 6px;
@@ -196,6 +189,12 @@ input[type=text]::placeholder {
 
 .models-filtered-search .products {
   padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.models-filtered-search h1 {
+  display: none;
 }
 
 .product-grid {
@@ -538,20 +537,10 @@ input[type=text]::placeholder {
     padding-left: 10px;
   }
   .search {
+    min-width: 300px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    top: 0;
-    padding-top: 20px;
-  }
-  .search h1 {
-    display: block;
-    margin: 0;
-    order: 1;
-  }
-  .search input {
-    order: 2;
-    max-width: 300px;
   }
   .about .header {
     position: sticky;
@@ -644,13 +633,14 @@ input[type=text]::placeholder {
   .models-filtered-search .sticky-bar {
     height: 79px;
     padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   .models-all h1,
   .models-filtered h1,
   .models-filtered-search h1 {
-    font-family: "Montserrat Alternates";
-    font-weight: 700;
-    font-size: 32px;
+    display: block;
   }
   .models-all .product-grid,
   .models-filtered .product-grid,

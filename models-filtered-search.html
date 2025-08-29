@@ -19,8 +19,12 @@
 
 <body class="models-filtered-search">
     <header class="header">
-        <a class="logo-link" href="">
-            <img class="logo-image" src="assets/printforge-logo-mobile.png" alt="Printforge logo for mobile devices." />
+        <a class="logo-link" href="#">
+            <picture class="logo-image">
+                <source media="(width < 402px)" srcset="assets/printforge-logo-mobile.png" />
+                <source media="(width >= 1500px)" srcset="assets/printforge-logo-desktop.png" />
+                <img src="assets/printforge-logo-mobile.png" alt="Printforge logo for mobile devices." />
+            </picture>
         </a>
         <nav class="nav">
             <a class="nav-link active" href="#">3D Models</a>
@@ -41,13 +45,35 @@
             <a class="nav-link" href="#">Toys & Games</a>
         </nav>
         <div class="products">
-            <!-- <h1>3D Models</h1> -->
-            <div class="wrapper">
+            <div class="sticky-bar">
+                <h1>3D Models</h1>
                 <div class="search">
                     <input type="text" name="search" placeholder="Search for a model" />
                 </div>
             </div>
             <div class="product-grid">
+                <div class="product">
+                    <img class="img" src="./assets/3d-models.png" alt="3D models product image." />
+                    <div class="text">
+                        <h2 class="name">Printer Upgrade Kit</h2>
+                        <p class="desc">Enhancement parts for 3D printer performance</p>
+                        <button type="button">3D-printer</button>
+                        <p class="vote">
+                            <i class="fa-regular fa-heart"></i><span class="num">1789</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="product">
+                    <img class="img" src="./assets/3d-models.png" alt="3D models product image." />
+                    <div class="text">
+                        <h2 class="name">Printer Upgrade Kit</h2>
+                        <p class="desc">Enhancement parts for 3D printer performance</p>
+                        <button type="button">3D-printer</button>
+                        <p class="vote">
+                            <i class="fa-regular fa-heart"></i><span class="num">1789</span>
+                        </p>
+                    </div>
+                </div>
                 <div class="product">
                     <img class="img" src="./assets/3d-models.png" alt="3D models product image." />
                     <div class="text">

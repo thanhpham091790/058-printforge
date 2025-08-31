@@ -18,8 +18,12 @@
 
 <body class="model-view">
     <header class="header">
-        <a class="logo-link" href="index.html">
-            <img class="logo-image" src="assets/printforge-logo-mobile.png" alt="Printforge logo for mobile devices." />
+        <a class="logo-link" href="#">
+            <picture class="logo-image">
+                <source media="(width < 402px)" srcset="assets/printforge-logo-mobile.png" />
+                <source media="(width >= 1500px)" srcset="assets/printforge-logo-desktop.png" />
+                <img src="assets/printforge-logo-mobile.png" alt="Printforge logo for mobile devices." />
+            </picture>
         </a>
         <nav class="nav">
             <a class="nav-link active" href="products.html">3D Models</a>

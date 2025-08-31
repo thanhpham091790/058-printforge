@@ -284,20 +284,12 @@ input[type=text]::placeholder {
 .about img {
   padding: 0 20px;
 }
-.about .wrapper {
-  all: unset;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px 0;
-}
-.about .mission {
-  padding: 0 20px;
-}
 .about .mission-content {
+  padding: 20px 20px 40px 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  border-bottom: 1px solid var(--color-16);
 }
 .about h1 {
   font-family: inherit;
@@ -311,15 +303,12 @@ input[type=text]::placeholder {
   font-weight: 700;
   font-size: 40px;
 }
-.about .line {
-  margin: 20px 0;
-  border: 1px solid var(--color-16);
-}
 .about .features {
-  padding: 0 20px;
+  padding: 40px 20px 40px 20px;
   display: flex;
   flex-direction: column;
   gap: 48px;
+  border-bottom: 1px solid var(--color-16);
 }
 .about .card {
   display: flex;
@@ -345,15 +334,15 @@ input[type=text]::placeholder {
   font-size: 20px;
 }
 .about .vision {
-  padding: 0 20px;
-}
-.about .vision-content {
+  padding: 40px 20px 40px 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.about .vision-content .line {
-  width: 66%;
+.about .line {
+  width: 245px;
+  height: 0;
+  border-top: 1px solid var(--color-16);
   margin: 20px auto;
 }
 

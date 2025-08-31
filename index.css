@@ -153,6 +153,14 @@ img {
   position: relative;
 }
 
+.sticky-bar {
+  position: sticky;
+  top: 60px;
+  z-index: 1;
+  background-color: var(--color-4);
+  padding-bottom: 12px;
+}
+
 .search {
   height: 40px;
   padding: 6px;
@@ -214,6 +222,8 @@ input[type=text]::placeholder {
 }
 .product .text {
   padding: 16px;
+}
+.product .content {
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -540,6 +550,32 @@ input[type=text]::placeholder {
     justify-content: space-between;
     align-items: center;
   }
+  .model-view .main {
+    padding: 40px;
+    display: flex;
+    gap: 100px;
+    height: 895px;
+    align-items: center;
+  }
+  .model-view .container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+  }
+  .model-view .back-to-overview {
+    display: none;
+  }
+  .model-view img {
+    padding: 0;
+    max-width: 662px;
+  }
+  .model-view .text {
+    padding: 0;
+  }
+  .model-view .content {
+    height: auto;
+  }
   .about .header {
     position: sticky;
     top: 0;
@@ -720,7 +756,8 @@ input[type=text]::placeholder {
     box-shadow: 2px 3px 8px 4px var(--color-11);
     transform: scale(1.06);
   }
-  .home .main {
+  .home .main,
+  .home-alt .main {
     min-height: 707px;
     display: flex;
     flex-direction: row-reverse;
@@ -729,7 +766,8 @@ input[type=text]::placeholder {
     align-items: center;
     gap: 100px;
   }
-  .home .intro {
+  .home .intro,
+  .home-alt .intro {
     order: 1;
     flex: 0 0 600px;
     height: 452px;
@@ -738,23 +776,27 @@ input[type=text]::placeholder {
     gap: 73px;
     padding: 0;
   }
-  .home .text {
+  .home .text,
+  .home-alt .text {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
-  .home .desktop-only {
+  .home .desktop-only,
+  .home-alt .desktop-only {
     display: block;
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 5%;
     text-transform: uppercase;
   }
-  .home h1 {
+  .home h1,
+  .home-alt h1 {
     font-size: 56px;
     margin: 0;
   }
-  .home p {
+  .home p,
+  .home-alt p {
     margin: 0;
     font-size: 28px;
   }

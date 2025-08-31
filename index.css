@@ -284,12 +284,14 @@ input[type=text]::placeholder {
 .about img {
   padding: 0 20px;
 }
+.about .mission {
+  border-bottom: 1px solid var(--color-16);
+}
 .about .mission-content {
   padding: 20px 20px 40px 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border-bottom: 1px solid var(--color-16);
 }
 .about h1 {
   font-family: inherit;
@@ -335,6 +337,8 @@ input[type=text]::placeholder {
 }
 .about .vision {
   padding: 40px 20px 40px 20px;
+}
+.about .vision-content {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -344,6 +348,11 @@ input[type=text]::placeholder {
   height: 0;
   border-top: 1px solid var(--color-16);
   margin: 20px auto;
+}
+.about .watermark img {
+  width: 139.35px;
+  height: 135.47px;
+  margin: 80px auto;
 }
 
 .model-view .back-to-overview {
@@ -540,9 +549,32 @@ input[type=text]::placeholder {
   .about .main {
     display: flex;
     flex-direction: column;
+    gap: 40px;
+  }
+  .about .mission {
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 100px;
+  }
+  .about img {
+    padding: 0;
+    flex: 1 0 628px;
+  }
+  .about .mission-content {
+    padding: 0;
+    flex: 0 0 600px;
+  }
+  .about h1 {
+    font-size: 20px;
+  }
+  .about h2 {
+    font-size: 56px;
+  }
+  .about p {
+    font-size: 28px;
   }
   .about .our-vision {
     max-width: 800px;
@@ -560,45 +592,29 @@ input[type=text]::placeholder {
   .about .our-vision img {
     margin: 100px auto;
   }
-  .about .about-printforge,
   .about .features {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 40px;
+    flex-direction: row;
+    border-bottom: none;
+    gap: 0;
   }
-  .about .about-printforge h3,
-  .about .features h3 {
-    font-size: 28px;
+  .about .card {
+    padding: 0 48px;
   }
-  .about .about-printforge p,
-  .about .features p {
-    font-size: 20px;
-    word-break: keep-all;
+  .about .card:not(:last-of-type) {
+    border-right: 1px solid var(--color-16);
   }
-  .about .model-available,
-  .about .active-community,
-  .about .free-to-use {
-    padding: 60px;
+  .about .card {
+    max-width: 446px;
   }
-  .about .about-printforge {
-    gap: 100px;
+  .about .vision {
+    border-top: 1px solid var(--color-16);
+    padding: 40px;
   }
-  .about .about-printforge img {
-    flex: 1 0 627px;
-    padding-left: 40px;
-  }
-  .about .about-printforge .text {
-    flex: 1 1 600px;
-    padding-right: 60px;
-  }
-  .about .about-printforge h1 {
-    font-size: 20px;
-  }
-  .about .about-printforge h2 {
-    font-size: 56px;
-  }
-  .about .about-printforge p {
-    font-size: 28px;
+  .about .vision-content {
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 18px;
   }
   .models-all .main,
   .models-filtered .main,
